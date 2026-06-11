@@ -82,7 +82,32 @@ SIIS\_Project/
 
 └── README.md
 
+## Key Findings
+- **Summer is the highest stress season** — Drought Risk Score 14.0, nearly 2x Monsoon
+- **91% of days** show WARNING or CRITICAL water stress levels
+- **Temperature drives 67.5%** of water stress variance (Random Forest feature importance)
+- **Zone_C** has the highest average WSI — priority zone for irrigation optimization
+- **Cotton** shows highest water stress (WSI 6.40) vs Wheat lowest (WSI 6.15)
+- ML model achieved **R² = 0.97, RMSE = 0.22** on Water Stress Index prediction
 
+## Dashboard Screenshots
+
+### Page 1 — Executive Overview
+![Executive Overview](data/cleaned/dashboard_page1.png)
+
+### Page 2 — Crop & Season Analysis
+![Crop & Season Analysis](data/cleaned/dashboard_page2.png)
+
+### Page 3 — ML Predictions
+![ML Predictions](data/cleaned/dashboard_page3.png)
+
+## How to Run
+1. Clone this repository
+2. Run `generate_sensor_data.py` to generate synthetic sensor data
+3. Run `ml/load_to_sql.py` to load data into SQL Server
+4. Open `notebooks/01_EDA.ipynb` for exploratory analysis
+5. Run `ml/model_training.py` to train the ML model
+6. Open `powerbi/SIIS_Dashboard.pbix` in Power BI Desktop
 
 
 
